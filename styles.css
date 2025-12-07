@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #fffef9;
+    color: #1a1a1a;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    padding: 5rem 2rem 3rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: #1a1a1a;
+    letter-spacing: -0.02em;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 1.15rem;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem 5rem;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.25rem;
+}
+
+.project-card {
+    background: #fff;
+    border: 2px solid #1a1a1a;
+    border-radius: 16px;
+    padding: 1.75rem;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.15s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    position: relative;
+}
+
+.project-card:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 6px 6px 0 #1a1a1a;
+}
+
+.project-card:nth-child(1) { background: #fef3c7; }
+.project-card:nth-child(2) { background: #dbeafe; }
+.project-card:nth-child(3) { background: #fce7f3; }
+.project-card:nth-child(4) { background: #d1fae5; }
+.project-card:nth-child(5) { background: #ede9fe; }
+.project-card:nth-child(6) { background: #ffedd5; }
+
+.project-icon {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    opacity: 0.4;
+    font-family: 'SF Mono', Monaco, 'Courier New', monospace;
+}
+
+.project-card h2 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.project-card p {
+    color: #444;
+    font-size: 0.95rem;
+    flex-grow: 1;
+}
+
+.link-indicator {
+    color: #1a1a1a;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-top: 0.75rem;
+    opacity: 0.6;
+    transition: opacity 0.15s ease;
+}
+
+.project-card:hover .link-indicator {
+    opacity: 1;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    color: #999;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 3rem 1.5rem 2rem;
+    }
+
+    header h1 {
+        font-size: 2.25rem;
+    }
+
+    main {
+        padding: 0 1rem 3rem;
+    }
+
+    .projects {
+        grid-template-columns: 1fr;
+    }
+}
